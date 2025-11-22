@@ -105,11 +105,9 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
-      - name: install rust toolchain (rust-toolchain-reborn)
-        uses: crusty-pie/toolchain@v1.0.8
+      - name: install rust toolchain
+        uses: dtolnay/rust-toolchain@stable
         with:
-          profile: minimal
-          toolchain: stable
           targets: ${{ matrix.target }}
 
       - uses: ilammy/setup-nasm@v1
